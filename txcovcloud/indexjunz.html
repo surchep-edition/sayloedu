@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI Cloud</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Loader */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .spin {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #3b82f6;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    /* Fade In Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spin"></div>
+  </div>  <!-- Navbar -->  <header class="flex justify-between items-center p-6 shadow-md">
+    <div class="flex items-center gap-3">
+      <img src="https://files.catbox.moe/htm9p5.jpg" alt="Logo" class="w-12 h-12 animate-bounce">
+      <h1 class="text-2xl font-bold">SI Cloud</h1>
+    </div>
+    <nav class="hidden md:flex gap-6">
+      <a href="#features" class="hover:text-blue-500 transition duration-300">Fitur</a>
+      <a href="#pricing" class="hover:text-blue-500 transition duration-300">Harga</a>
+      <a href="#contact" class="hover:text-blue-500 transition duration-300">Kontak</a>
+    </nav>
+  </header>  <!-- Hero Section -->  <section class="text-center py-20 bg-gradient-to-r from-blue-400 to-green-400 text-white">
+    <h2 class="text-4xl font-bold mb-4 fade-in" style="animation-delay:0.2s">Solusi Cloud Hosting Terbaik</h2>
+    <p class="text-lg max-w-2xl mx-auto mb-6 fade-in" style="animation-delay:0.5s">
+      Akses server cepat, aman, dan handal dengan harga terjangkau.
+    </p>
+    <a href="#pricing" class="bg-white text-blue-500 font-semibold rounded-xl px-6 py-3 shadow-lg transform hover:scale-110 transition duration-300 fade-in" style="animation-delay:0.8s">Mulai Sekarang</a>
+  </section>  <!-- Features -->  <section id="features" class="py-20 px-6 md:px-20 grid md:grid-cols-3 gap-8">
+    <div class="rounded-2xl shadow-lg p-6 text-center transform hover:-translate-y-2 transition duration-300 fade-in" style="animation-delay:1s">
+      <img src="https://files.catbox.moe/htm9p5.jpg" alt="Logo Produk" class="w-12 h-12 mx-auto mb-4">
+      <h3 class="text-xl font-bold mb-2">Keamanan Tinggi</h3>
+      <p class="text-gray-600">Data Anda dilindungi dengan enkripsi tingkat lanjut.</p>
+    </div>
+    <div class="rounded-2xl shadow-lg p-6 text-center transform hover:-translate-y-2 transition duration-300 fade-in" style="animation-delay:1.2s">
+      <img src="https://files.catbox.moe/htm9p5.jpg" alt="Logo Produk" class="w-12 h-12 mx-auto mb-4">
+      <h3 class="text-xl font-bold mb-2">Server Cepat</h3>
+      <p class="text-gray-600">Nikmati performa maksimal dengan uptime 99.9%.</p>
+    </div>
+    <div class="rounded-2xl shadow-lg p-6 text-center transform hover:-translate-y-2 transition duration-300 fade-in" style="animation-delay:1.4s">
+      <img src="https://files.catbox.moe/htm9p5.jpg" alt="Logo Produk" class="w-12 h-12 mx-auto mb-4">
+      <h3 class="text-xl font-bold mb-2">Dukungan 24/7</h3>
+      <p class="text-gray-600">Tim support selalu siap membantu kapanpun.</p>
+    </div>
+  </section>  <!-- Pricing -->  <section id="pricing" class="py-20 bg-gray-100 px-6 md:px-20">
+    <h2 class="text-center text-3xl font-bold mb-12 fade-in" style="animation-delay:1.6s">Paket Harga</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="rounded-2xl shadow-lg p-6 text-center transform hover:scale-105 transition duration-300 fade-in" style="animation-delay:1.8s">
+        <img src="https://files.catbox.moe/htm9p5.jpg" alt="Logo Produk" class="w-12 h-12 mx-auto mb-4">
+        <h3 class="text-2xl font-bold mb-4">Basic Hosting</h3>
+        <p class="text-xl text-blue-500 mb-6">Rp 50.000/bln</p>
+        <ul class="mb-6 space-y-2">
+          <li>✅ Free Domain my.id,biz.id </li>
+          <li>✅ akses panel server gratis</li>
+          <li>✅ SSL Gratis</li>
+		  <li>✅ Free Konsultasi & Garansi</li>
+		  <li>✅ Biaya Bulanan Rendah</li>
+        </ul>
+        <a href="#" class="bg-blue-500 text-white rounded-xl px-4 py-2">Pilih Paket</a>
+      </div><div class="rounded-2xl shadow-lg p-6 text-center transform hover:scale-105 transition duration-300 fade-in" style="animation-delay:2s">
+    <img src="https://files.catbox.moe/htm9p5.jpg" alt="Logo Produk" class="w-12 h-12 mx-auto mb-4">
+    <h3 class="text-2xl font-bold mb-4">Pro Hosting</h3>
+    <p class="text-xl text-blue-500 mb-6">Rp 150.000/bln</p>
+    <ul class="mb-6 space-y-2">
+                <li>✅ Free Domain my.id,biz.id </li>
+          <li>✅ akses panel server gratis</li>
+          <li>✅ SSL Gratis</li>
+		  <li>✅ Free Konsultasi & Garansi</li>
+		  <li>✅ Biaya Bulanan Rendah</li>
+        </ul>
+    <a href="#" class="bg-blue-500 text-white rounded-xl px-4 py-2">Pilih Paket</a>
+  </div>
+
+  <div class="rounded-2xl shadow-lg p-6 text-center transform hover:scale-105 transition duration-300 fade-in" style="animation-delay:2.2s">
+    <img src="https://files.catbox.moe/htm9p5.jpg" alt="Logo Produk" class="w-12 h-12 mx-auto mb-4">
+    <h3 class="text-2xl font-bold mb-4">Enterprise Hosting Superly</h3>
+    <p class="text-xl text-blue-500 mb-6">Rp 300.000/bln</p>
+    <ul class="mb-6 space-y-2">
+                <li>✅ Free Domain my.id,biz.id </li>
+                <li>✅ akses panel server gratis</li>
+                <li>✅ SSL Gratis</li>
+		        <li>✅ Free Konsultasi & Garansi</li>
+		        <li>✅ Biaya Bulanan Rendah</li>
+              </ul>
+    <a href="#" class="bg-blue-500 text-white rounded-xl px-4 py-2">Pilih Paket</a>
+  </div>
+</div>
+
+  </section>  <!-- Contact -->  <section id="contact" class="py-20 px-6 md:px-20 text-center fade-in" style="animation-delay:2.4s">
+    <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
+    <p class="text-gray-600 mb-6">
+      Ingin tahu lebih lanjut? Hubungi tim kami untuk informasi lebih lengkap.
+    </p>
+    <a href="https://wa.me/6281232715307" class="bg-green-500 text-white rounded-xl px-6 py-3 shadow-lg transform hover:scale-110 transition duration-300">WhatsApp Kami</a>
+  </section>  <!-- Footer -->  <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+    <p>© <script>document.write(new Date().getFullYear())</script> S1 Cloud. All rights reserved.</p>
+  </footer>  <script>
+    // Loader hide after page load
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      loader.style.opacity = "0";
+      setTimeout(() => loader.style.display = "none", 500);
+    });
+  </script></body>
+</html>
